@@ -21,20 +21,20 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
                 <li class="nav-item">
-                  <%= link_to "投稿フォーム", new_post_image_path %>
+                  <%= link_to "投稿フォーム", new_post_image_path, class:"text-dark mr-1" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"text-dark mr-1" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "マイページ", user_path(current_user.id) %>
+                  <%= link_to "マイページ", user_path(current_user.id), class:"text-dark" %>
                 </li>
               <% else %>
                 <li class="nav-item">
-                  <%= link_to "新規登録", new_user_registration_path %>
+                  <%= link_to "新規登録", new_user_registration_path, class:"text-dark mr-1" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "ログイン", new_user_session_path %>
+                  <%= link_to "ログイン", new_user_session_path, class:"text-dark" %>
                 </li>
               <% end %>
             </ul>
@@ -66,6 +66,6 @@
         </div>
       </div>
     </footer>
-    
+
   </body>
 </html>
